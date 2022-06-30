@@ -24,13 +24,13 @@ public class StepDefinitions {
 
     @And("Navegador debe mostrar el sitio web")
     public void navegador_debe_mostrar_el_sitio_web() {
-        String URL = "https://www.intelaf.com/";
+        String URL = "https://www.10x.gt/";
         this.driver.get(URL);
     }
 
     @Then("El sitio web debe mostrar el logo")
     public void el_sitio_web_debe_mostrar_el_logo() {
-        String tagLogo = driver.findElement(By.className("logo")).getTagName();
+        String tagLogo = driver.findElement(By.className("custom-logo")).getTagName();
         assertTrue(tagLogo.equals("img"));
         driver.close();        
     }
